@@ -1,0 +1,30 @@
+.searchMovie {
+    .input-container {
+      
+
+        input {
+            font-family: 'Gilroy', sans-serif;
+            color: white;
+            border-radius: 10px;
+            border: 1px solid #618694;
+            height: 20px;
+            padding: 15px;
+            background: #618694;
+            outline: none;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.644);
+            }
+
+
+        }
+
+    }
+
+    .placeholer-container {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // margin-top: 15%;
+    }
+}

@@ -1,0 +1,125 @@
+$primary : #fff;
+$secondary : #F7AD1A;
+$dark: #04405C;
+$navhover: #429EBD;
+$secondary-background: #7fbed1;
+
+.btn {
+    font-family: 'Gilroy', sans-serif;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: $secondary-background;
+    border: 1px solid $secondary-background;
+    color: $primary;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: $dark;
+        border: 1px solid $dark;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.posterImage>img {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 920px;
+
+}
+
+.posterImage__overlay {
+    position: absolute;
+    padding: 5rem;
+    bottom: 0px;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.5));
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.posterImage__overlay:hover {
+    opacity: 1;
+}
+
+.posterImage__title {
+    font-weight: 900;
+    font-size: 4rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.posterImage__synopsis {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.posterImage__runtime {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.posterImage__rating {
+    margin-left: 3rem;
+}
+
+.posterImage__description {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    text-align: left;
+    width: 50%;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .posterImage>img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .posterImage__title {
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .posterImage__runtime {
+        text-align: center;
+        width: 100%;
+        font-size: 0.8rem;
+        margin-bottom: -2rem;
+
+    }
+
+    .posterImage__synopsis {
+        display: none;
+    }
+
+    .posterImage__description {
+        display: none;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 13px;
+        margin-top: 45px;
+        padding: 7px 10px;
+    }
+}

@@ -1,0 +1,25 @@
+.movie__list {
+    padding: 0 4rem 4rem 4rem;
+}
+
+.list__title {
+    font-size: 1.75rem;
+    margin: 2.5rem;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.list_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width : 1024px) {
+    .list_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+}
