@@ -1,13 +1,13 @@
 .cards {
     display: inline-block;
-    height: 570px;
+    height: 590px;
     background: #618694;
     transition: transform .2s;
     position: relative;
     justify-content: center;
     border-radius: 10px;
     overflow: hidden;
-    margin: 3.20rem;
+    margin: 3rem;
     cursor: pointer;
     min-width: 200px;
     z-index: 0;
@@ -81,15 +81,15 @@
 @media screen and (max-width: 1024px) {
     .cards {
         display: inline-block;
-        height: 550px;
+        height: 570px;
         background: #618694;
         transition: transform .2s;
         position: relative;
         border-radius: 10px;
         overflow: hidden;
-        margin: 1.20rem;
+        margin: 3.60rem;
         cursor: pointer;
-        min-width: 200px;
+        min-width: 230px;
         justify-content: center;
         align-items: center;
         flex-direction: column;

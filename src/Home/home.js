@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import { FaPlay } from "react-icons/fa";
 import MovieList from "../MovieList/MovieList";
+import Testimonial from "../Testimonials/Testimonial";
 
 const Home = () => {
 
@@ -52,6 +53,7 @@ const Home = () => {
 
                     }
                 </Carousel>
+                <Testimonial />
                 <MovieList />
             </div>
         </>

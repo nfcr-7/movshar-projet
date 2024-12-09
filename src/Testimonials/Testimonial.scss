@@ -1,0 +1,286 @@
+$primary : #fff;
+$secondary : #F7AD1A;
+$dark: #04405C;
+$navhover: #429EBD;
+$secondary-background: #7fbed1;
+
+.bigCard {
+    display: inline-block;
+    height: 500px;
+    background: $navhover;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    // flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    // margin: auto;
+    margin-left: 9%;
+    // float: right;
+    // cursor: pointer;
+    z-index: 0;
+}
+
+.testi_img {
+    // display: none;
+    float: right;
+    margin: 70px;
+    // display: inline-block;
+    // margin-left: 5rem;
+    // margin-right: 5rem;
+    // margin-top: 80px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+
+.p {
+    color: $dark;
+    margin: 80px;
+}
+
+.p1 {
+    color: $dark;
+    margin: 80px;
+    margin-top: -30px;
+
+}
+
+.col50 {
+    font-family: 'Gilroy', sans-serif;
+    display: flex;
+    width: 50%;
+    margin-left: -70rem;
+    margin-top: 100px;
+    color: $dark;
+    // margin-right: 150px;
+    // margin-left: ;
+    // width: 100px;
+}
+
+.col40 {
+    font-family: 'Gilroy', sans-serif;
+    display: flex;
+    width: 50%;
+    margin-left: -40.5rem;
+    margin-top: 250px;
+    color: $dark;
+}
+
+.col30 {
+    font-family: 'Gilroy', sans-serif;
+    display: flex;
+    width: 50%;
+    margin-left: -5.5rem;
+    // margin-top: 20px;
+    color: $dark;
+}
+
+.col {
+    display: flex;
+}
+
+.col20 {
+    display: flex;
+}
+
+.btnC {
+    font-weight: 500;
+    font-family: 'Gilroy', sans-serif;
+    display: inline-block;
+    // padding-top: -20px;
+    height: 50px;
+    margin-top: -65px;
+    padding: 10px 20px;
+    margin-left: 75px;
+    border-radius: 10px;
+    background: $primary;
+    border: 1px solid $primary;
+    color: #000;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+        background: $dark;
+        border: 1px solid $dark;
+        transition: all .5s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .bigCard {
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: 400px;
+        margin-left: 8%;
+        // margin-right: auto;
+    }
+
+    .testi_img {
+        width: 75%;
+        height: 100px;
+        // height: 50px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        // margin: auto;
+        // margin-left: 40rem;
+        // margin-top: 180px;
+    }
+
+    .btnC {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-family: 'Gilroy', sans-serif;
+        height: 50px;
+        margin-top: -50px;
+        padding: 10px 20px;
+        margin-left: 75px;
+        border-radius: 10px;
+        background: $primary;
+        border: 1px solid $primary;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary;
+            background: $dark;
+            border: 1px solid $dark;
+            transition: all .5s ease-in-out;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .bigCard {
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: 450px;
+        margin-left: 8%;
+        // margin-right: auto;
+    }
+
+    .testi_img {
+        width: 75%;
+        height: 100px;
+        // height: 50px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        // margin: auto;
+        // margin-left: 40rem;
+        // margin-top: 180px;
+    }
+
+    .btnC {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-family: 'Gilroy', sans-serif;
+        height: 50px;
+        margin-top: -50px;
+        padding: 10px 20px;
+        margin-left: 75px;
+        border-radius: 10px;
+        background: $primary;
+        border: 1px solid $primary;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary;
+            background: $dark;
+            border: 1px solid $dark;
+            transition: all .5s ease-in-out;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .bigCard {
+        // text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 520px;
+        margin-left: 2%;
+    }
+
+    .btnC {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-family: 'Gilroy', sans-serif;
+        height: 50px;
+        margin-top: -50px;
+        padding: 10px 20px;
+        margin-left: 80px;
+        border-radius: 10px;
+        background: $primary;
+        border: 1px solid $primary;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary;
+            background: $dark;
+            border: 1px solid $dark;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .bigCard {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 520px;
+        margin-left: 2.5%;
+    }
+
+    .btnC {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-family: 'Gilroy', sans-serif;
+        height: 50px;
+        margin-top: -50px;
+        padding: 10px 20px;
+        margin-left: 55px;
+        border-radius: 10px;
+        background: $primary;
+        border: 1px solid $primary;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: $primary;
+            background: $dark;
+            border: 1px solid $dark;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
