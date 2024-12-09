@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./searchMovie.scss";
-// import Movie from "../Movie/Movie";
+import Movie from "../Movie/Movie";
 
 const SearchMovie = () => {
 
@@ -10,7 +10,7 @@ const SearchMovie = () => {
 
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US&query=${query}`)
-        .then((res) => setData(res.data.results));
+            .then((res) => setData(res.data.results));
     }, [query]);
 
     const onSearch = (e) => {
@@ -23,11 +23,11 @@ const SearchMovie = () => {
         <div className="searchMovie">
             <div className="input-container">
                 <input
-                   placeholder="Rechercher"
-                   onChange={onSearch}
+                    placeholder="Rechercher"
+                    onChange={onSearch}
                 />
             </div>
-            {/* {query ? (
+            {query ? (
                 <div className="p">
                     {data.map((m) => (
                         <Movie movie={m} key={m.id} />
@@ -35,12 +35,11 @@ const SearchMovie = () => {
                 </div>
             ) : (
                 <div className="placeholer-container">
-                    <p></p>
-                    <p>Rien à afficher, veuillez entrer un mot clé</p>
+                    <h1>Rien à afficher, veuillez entrer un mot clé</h1>
                 </div>
-            )} */}
-            
-        </div>   
+            )}
+
+        </div>
     )
 }
 

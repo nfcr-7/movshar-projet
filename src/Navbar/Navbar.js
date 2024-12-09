@@ -55,8 +55,10 @@ const Navbar = () => {
                 <li className='nav-link-items' onClick={handleCloseMobileMenu}>
                     <a href='/' className='nav-link'>À propos</a>
                 </li>
-                <SearchMovie />
-                <a href='/search'></a> 
+                <li className='nav-link-items' onClick={handleCloseMobileMenu}>
+                    <a href='/search' className='nav-link'>Rechercher</a>
+                </li>
+                 
             </ul>
         </nav>
 

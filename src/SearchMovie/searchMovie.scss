@@ -1,6 +1,9 @@
 .searchMovie {
     .input-container {
-      
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 70px;
+        margin-right: 65px;
 
         input {
             font-family: 'Gilroy', sans-serif;
@@ -22,9 +25,9 @@
     }
 
     .placeholer-container {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // margin-top: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
     }
 }

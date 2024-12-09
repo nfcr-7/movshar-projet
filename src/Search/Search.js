@@ -6,7 +6,7 @@ const Search = () => {
     return (
         <div>
             <Navbar />
-            {/* <SearchMovie /> */}
+            <SearchMovie />
         </div>
     )
 }
