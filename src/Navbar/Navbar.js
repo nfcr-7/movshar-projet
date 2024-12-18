@@ -3,7 +3,6 @@ import "./Navbar.scss";
 import myImage from "./Group.png";
 import { FiMenu } from "react-icons/fi"
 import { GrClose } from "react-icons/gr"
-import SearchMovie from '../SearchMovie/SearchMovie';
 
 const Navbar = () => {
 
@@ -33,7 +32,6 @@ const Navbar = () => {
 
         <nav className={showNav ? 'navbar-container' : 'navbar-container active'}>
             <a href='/' className='navbar-logo'>
-                {/* <p>MovShar</p> */}
                 <img src={myImage} />
             </a>
             <div className='menu-icon' onClick={handleClick}>
@@ -47,10 +45,10 @@ const Navbar = () => {
                     <a href='/film' className='nav-link'>Film</a>
                 </li>
                 <li className='nav-link-items' onClick={handleCloseMobileMenu}>
-                    <a href='/' className='nav-link'>Catégorie</a>
+                    <a href='/categorie' className='nav-link'>Catégorie</a>
                 </li>
                 <li className='nav-link-items' onClick={handleCloseMobileMenu}>
-                    <a href='/' className='nav-link'>Acteur</a>
+                    <a href='/acteur' className='nav-link'>Acteur</a>
                 </li>
                 <li className='nav-link-items' onClick={handleCloseMobileMenu}>
                     <a href='/' className='nav-link'>À propos</a>
@@ -58,7 +56,7 @@ const Navbar = () => {
                 <li className='nav-link-items' onClick={handleCloseMobileMenu}>
                     <a href='/search' className='nav-link'>Rechercher</a>
                 </li>
-                 
+
             </ul>
         </nav>
 

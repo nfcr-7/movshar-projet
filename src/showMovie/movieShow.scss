@@ -1,0 +1,36 @@
+.movie {
+    height: 150px;
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 18%;
+
+    img {
+        height: 130px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .conteneur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        text-align: center;
+        color: #f7f7f7;
+        font-weight: bold;
+        opacity: 0;
+    }
+
+    .conteneur:hover {
+        opacity: 1;
+    }
+}
+
+.movie:hover {
+    transform: scale(1.5);
+    z-index: 2;
+}
+

@@ -1,0 +1,153 @@
+.actor-details {
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+
+    .actor-head {
+        font-family: 'Gilroy', sans-serif;
+        display: flex;
+        margin-top: 130px;
+        gap: 20px;
+        margin-bottom: 40px;
+
+        .actor-pic {
+            flex: 1;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .actor-info {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #fff;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+
+            button {
+                font-family: 'Gilroy', sans-serif;
+                background-color: rgba(255, 255, 255, 0.2);
+                color: #9FE7F5;
+                width: 30%;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #2980b9;
+                }
+            }
+
+            .info-line {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 20px;
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
+
+                .left {
+                    span {
+                        font-weight: bold;
+                        color: #F7AD1A;
+                    }
+
+                    p {
+                        margin: 5px 0 0;
+                        color: #fff;
+                    }
+                }
+
+                .material-symbols-outlined {
+                    font-size: 1.2rem;
+                    color: #F7AD1A;
+                }
+            }
+        }
+    }
+
+    .films-reco {
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 1.5rem;
+                color: #fff;
+            }
+
+            .see-all {
+                font-family: 'Gilroy', sans-serif;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                a {
+                    color: #F7AD1A;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .material-symbols-outlined {
+                    font-size: 1rem;
+                    color: #F7AD1A;
+                }
+            }
+        }
+    }
+
+    .actor-movies {
+        .movie-list {
+            font-family: 'Gilroy', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            div {
+                text-align: center;
+                width: 150px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-size: 0.9rem;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

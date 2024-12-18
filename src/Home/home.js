@@ -6,10 +6,14 @@ import { Link } from "react-router-dom";
 import { FaPlay } from "react-icons/fa";
 import MovieList from "../MovieList/MovieList";
 import Testimonial from "../Testimonials/Testimonial";
+import ActorCard from "../Actor/actorCard";
+import Actor from "../Actor/actor";
 
 const Home = () => {
 
     const [popularMovies, setPopularMovies] = useState([]);
+
+    
 
     useEffect(() => {
         fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
@@ -45,7 +49,14 @@ const Home = () => {
                                     </div>
                                     <p className="posterImage__synopsis">Synopsis</p>
                                     <div className="posterImage__description">{movie ? movie.overview : ""}</div>
-                                    <button className="btn"><FaPlay /> Bande annonce</button>
+                                    <div className='row'>
+                                        <div className='col20'>
+                                            <button className="btn"><FaPlay /> Bande annonce</button>
+                                        </div>
+                                        <div className='col30'>
+                                            <button className="btn1">Voir l'affiche</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </Link>
 
@@ -55,6 +66,8 @@ const Home = () => {
                 </Carousel>
                 <Testimonial />
                 <MovieList />
+                {/* <ActorCard /> */}
+                <Actor/>
             </div>
         </>
     )

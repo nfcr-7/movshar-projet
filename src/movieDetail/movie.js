@@ -1,10 +1,57 @@
 import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import axios from "axios"
 import "./movie.scss"
 import { useParams } from "react-router-dom"
+
 
 const Movie = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
+    const API_KEY = "a67b57849deb687f2cd49d7a8298b366";
+    const BASE_URL = "https://api.themoviedb.org/3";
+    const [trailerKey, setTrailerKey] = useState("");
+    const [actors, setActors] = useState([]);
+    const navigate = useNavigate(); 
+
+    useEffect(() => {
+        const fetchActors = async () => {
+            const API_KEY = "a67b57849deb687f2cd49d7a8298b366";
+            const BASE_URL = "https://api.themoviedb.org/3";
+            try {
+                const response = await axios.get(
+                    `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`
+                );
+                setActors(response.data.cast.slice(0, 5)); // Limiter à 8 acteurs
+            } catch (error) {
+                console.error("Erreur lors de la récupération des acteurs :", error);
+            }
+        };
+
+
+        fetchActors();
+    }, [id]);
+
+    const handleActorClick = (actorId) => {
+        navigate(`/actorDetails/${actorId}`);
+    };
+
+
+    useEffect(() => {
+        const fetchTrailer = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}`);
+                const videos = response.data.results;
+                const trailer = videos.find((video) => video.type === "Trailer" && video.site === "YouTube");
+                if (trailer) {
+                    setTrailerKey(trailer.key);
+                }
+            } catch (error) {
+                console.error("Erreur lors de la récupération de la bande-annonce :", error);
+            }
+        };
+        fetchTrailer();
+    }, [id]);
 
     useEffect(() => {
         getData()
@@ -54,11 +101,62 @@ const Movie = () => {
                         <div className="synopsisText">Synopsis</div>
                         <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
                     </div>
+                    
+                    {/* Section Acteurs */}
+                    <div className="actor">
+                        {/* Section Acteurs */}
+                        <h2>Acteurs principaux</h2><br/>
+                        <div className="actor-wrapper" style={{ display: "flex", gap: "20px" }}>
+                            {actors.map((actor) => (
+                                <div
+                                    className="actor-item"
+                                    key={actor.id}
+                                    style={{ textAlign: "center", cursor: "pointer" }}
+                                    onClick={() => handleActorClick(actor.id)}
+
+                                >
+                                    <img
+                                        src={
+                                            actor.profile_path
+                                                ? `http://image.tmdb.org/t/p/w200${actor.profile_path}`
+                                                : "https://via.placeholder.com/200x300?text=No+Image"
+                                        }
+                                        alt={actor.name}
+                                        style={{
+                                            width: "150px",
+                                            height: "225px",
+                                            objectFit: "cover",
+                                            borderRadius: "10px",
+                                        }}
+                                    />
+                                    <h3 style={{ marginTop: "10px" }}>{actor.name}</h3>
+                                </div>
+                            ))}
+                        </div>
+                    </div><br/>
+
+
+                    {/* Section Bande-Annonce */}
+                    {trailerKey && (
+                        <div className="trailer-section" style={{ padding: "20px", textAlign: "center" }}>
+                            <h2>Trailer</h2><br />
+                            <iframe
+                                width="100%"
+                                height="500px"
+                                src={`https://www.youtube.com/embed/${trailerKey}`}
+                                title="Trailer"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    )}
 
                 </div>
             </div>
+
             <div className="movie__links">
-                <div className="movie__heading">Useful Links</div>
+                <div className="movie__heading1">Useful Links</div>
                 {
                     currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{ textDecoration: "none" }}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }

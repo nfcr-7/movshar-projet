@@ -1,0 +1,54 @@
+.movieN {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #618694;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .posterN {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 2px solid #34495e;
+    }
+
+    .conteneurN {
+        padding: 15px;
+        color: #ecf0f1;
+
+        .movie_titleN {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .date_noteN {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 10px;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        p:last-child {
+            font-size: 0.9rem;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}

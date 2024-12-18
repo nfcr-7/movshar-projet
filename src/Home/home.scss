@@ -23,6 +23,45 @@ $secondary-background: #7fbed1;
     }
 }
 
+.btn1 {
+    font-weight: 500;
+    font-family: 'Gilroy', sans-serif;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 4rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: $secondary;
+    border: 1px solid $secondary;
+    color: $dark;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: $primary;
+        border: 1px solid $primary;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+
+.col20 {
+    display: flex;
+}
+
+.col30 {
+    font-family: 'Gilroy', sans-serif;
+    display: flex;
+    width: 50%;
+    margin-left: 5.5rem;
+    color: $dark;
+}
+
 .posterImage>img {
     margin: auto;
     display: block;
@@ -116,7 +155,56 @@ $secondary-background: #7fbed1;
 
     .btn {
         display: inline-block;
-        margin-left: auto;
+        margin-left: 270px;
+        margin-right: auto;
+        font-size: 13px;
+        margin-top: 45px;
+        padding: 7px 10px;
+    }
+
+    .btn1 {
+        display: inline-block;
+        margin-left: 50px;
+        margin-right: auto;
+        font-size: 13px;
+        margin-top: 45px;
+        padding: 7px 10px;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .btn {
+        display: inline-block;
+        margin-left: 210px;
+        margin-right: auto;
+        font-size: 13px;
+        margin-top: 45px;
+        padding: 7px 10px;
+    }
+
+    .btn1 {
+        display: inline-block;
+        margin-left: 50px;
+        margin-right: auto;
+        font-size: 13px;
+        margin-top: 45px;
+        padding: 7px 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .btn {
+        display: inline-block;
+        margin-left: 60px;
+        margin-right: auto;
+        font-size: 13px;
+        margin-top: 45px;
+        padding: 7px 10px;
+    }
+
+    .btn1 {
+        display: inline-block;
+        margin-left: 50px;
         margin-right: auto;
         font-size: 13px;
         margin-top: 45px;
